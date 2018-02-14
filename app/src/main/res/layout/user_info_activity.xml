@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/background_text"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_marginLeft="-16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_user"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/def"/>
+
+                <LinearLayout
+                    android:layout_marginBottom="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User title"
+                        android:textSize="25dp"/>
+
+                    <TextView
+                        android:id="@+id/subtitle_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="subtitle"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_gravity="bottom|right"
+            android:id="@+id/fab_change"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:src="@drawable/_0004_down"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom|end"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:theme="@style/titleText"
+            android:layout_width="match_parent"
+            android:text="@string/links"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/layout_source"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fb_img"
+                android:layout_margin="10dp"
+                android:src="@drawable/_0001_fb"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <ImageView
+                android:id="@+id/hh_img"
+                android:layout_margin="10dp"
+                android:src="@drawable/_0002_hh"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <ImageView
+                android:id="@+id/git_img"
+                android:layout_margin="10dp"
+                android:src="@drawable/_0003_github"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <ImageView
+                android:id="@+id/job_img"
+                android:layout_margin="10dp"
+                android:src="@drawable/job"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/edit_img"
+                    android:layout_toRightOf="@+id/edit_img"
+                    android:text="@string/about"
+                    android:theme="@style/titleText"/>
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/edit_img"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/_0006_edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/text_about"
+                android:text="@string/no_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/about_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:maxLines="3"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:hint="@string/hint_about"
+                        android:background="@null"
+                        android:id="@+id/input_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+                    <Button
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/save"
+                        android:textColor="#fff"
+                        android:background="@color/background_button"
+                        android:layout_gravity="right"
+                        android:id="@+id/save_btn"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"/>
+                </LinearLayout>
+            </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

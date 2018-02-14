@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:paddingTop="10dp"
+
+        android:orientation="horizontal"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:weightSum="3"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/profile"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/account_passive"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/profile_active"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/accaunt_active"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/search"
+                    android:src="@drawable/seach_passive"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/search_active"
+                    android:src="@drawable/search_active"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/chat"
+                    android:src="@drawable/message_passive"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/chatactive"
+                    android:src="@drawable/message_active"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </FrameLayout>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

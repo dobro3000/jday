@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">myJDay</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="setting_title">Настройки</string>
+    <string name="change">Изменить</string>
+
+    <string name="login">Логин</string>
+    <string name="nickname">Никнейм</string>
+    <string name="email">Почта</string>
+    <string name="password">Пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+
+    <string name="no_connect_link">Не подключено</string>
+    <string name="save">Сохранить</string>
+    <string name="no_info">Информация отсутсвует.</string>
+    <string name="links">Ссылки на профиль</string>
+    <string name="messages">Сообщения</string>
+
+    <string name="new_piples">Новые пары</string>
+
+    <string name="loading_photo">Загрузить фото</string>
+    <string name="exit">Выход</string>
+    <string name="singup">Вход</string>
+    <string name="title_activity_test">test</string>
+
+    <string name="about_user_string">О пользователе </string>
+    <string name="about">О себе</string>
+    <string name="current_job">Текущая работа</string>
+    <string name="hint_about">Расскажите о себе</string>
+
+    <string name="user_settings">Пользовательские настройки</string>
+    <string name="connect_link">Подключить аккаунты</string>
+
+    <string name="tags">Тэги</string>
+
+    <string name="show">Показать</string>
+    <string name="show_all">Показать всех</string>
+    <string name="show_in_my_auditory">Из моей сферы</string>
+
+
+    <string name="another">Другое</string>
+    <string name="hide_in_search">Скрыть меня в поиске jDay</string>
+    <string name="stage_in_profation">Опыт в моей професси</string>
+    <string name="age_diapason">Возрастной диапазон</string>
+
+    <string name="setting_app">Настройки уведомлений</string>
+    <string name="message">Сообщения</string>
+    <string name="mentor">Заявка на наставничество</string>
+    <string name="super_like">Супер-лайк</string>
+
+    <string name="communication">Связаться с нами</string>
+    <string name="registration">Регистрация</string>
+    <string name="forgatepassword">Забыли пaроль?</string>
+</resources>

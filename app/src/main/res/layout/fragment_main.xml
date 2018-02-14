@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/constraintLayout"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:layout_marginBottom="100dp"
+            android:id="@+id/users_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:weightSum="5"
+            android:gravity="center"
+            android:background="@color/background"
+            android:id="@+id/layout_panel"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:src="@drawable/back"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:src="@drawable/dislike"
+                    android:id="@+id/dislike"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:src="@drawable/favorite"
+                    android:id="@+id/favorite"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:src="@drawable/like"
+                    android:id="@+id/like"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <ImageView
+                    android:src="@drawable/next"
+                    android:id="@+id/next"
+                    android:layout_weight="1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+        </LinearLayout>
+
+</RelativeLayout>
