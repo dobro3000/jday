@@ -24,7 +24,7 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_activity);
-
+        
         ageTxt = (TextView) findViewById(R.id.age_value);
         stageTxt = (TextView) findViewById(R.id.age_stage);
         swithAll = (Switch) findViewById(R.id.switch_all);

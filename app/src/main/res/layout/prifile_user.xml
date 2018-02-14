@@ -30,7 +30,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/def"
+                android:src="@drawable/def_camera"
                 app:layout_collapseMode="parallax"/>
 
             <TextView
