@@ -1,48 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <TextView
-        android:text="uytr"
-        android:layout_margin="7dp"
-        android:background="@drawable/round_for_date"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/date_dialog"
+        android:padding="5dp"
+        android:background="@drawable/background_me"
+        android:layout_toLeftOf="@+id/layout_avatar"
+        android:id="@+id/user_message"
+        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="cjrhr"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:id="@+id/layout_avatar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
+        <com.meg7.widget.CircleImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/def_camera"
+            android:scaleType="centerCrop"
+            app:layout_collapseMode="parallax" />
         <TextView
-            android:layout_marginTop="10dp"
-            android:id="@+id/user_message"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:id="@+id/default_avatar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/layout_avatar"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <com.meg7.widget.CircleImageView
-                android:id="@+id/user_avatar"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax" />
-            <TextView
-                android:layout_gravity="center"
-                android:visibility="visible"
-                android:id="@+id/default_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </FrameLayout>
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

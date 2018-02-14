@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <com.meg7.widget.CircleImageView
+            android:src="@drawable/def_camera"
             android:id="@+id/user_avatar"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -25,8 +26,13 @@
     </FrameLayout>
 
     <TextView
+        android:padding="5dp"
+        android:background="@drawable/bakground_for"
+        android:layout_gravity="center"
         android:id="@+id/user_message"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:text="cjrhr"/>
 
 </LinearLayout>

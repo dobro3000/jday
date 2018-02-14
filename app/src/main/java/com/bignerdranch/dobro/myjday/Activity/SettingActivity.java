@@ -27,11 +27,8 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_activity);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        ActionBar bar = this.getSupportActionBar();
+        bar.setHomeButtonEnabled(true);
 
         ageTxt = (TextView) findViewById(R.id.age_value);
         stageTxt = (TextView) findViewById(R.id.age_stage);

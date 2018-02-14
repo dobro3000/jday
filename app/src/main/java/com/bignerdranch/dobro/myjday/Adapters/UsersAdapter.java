@@ -91,7 +91,8 @@ public class UsersAdapter extends PagerAdapter {
 
     public void scrollBack(){
         if(currentPosition < getCount() - 1){
-           // instantiateItem(_container, currentPosition);
+            instantiateItem(_container, currentPosition);
+            notifyDataSetChanged();
         }
         else {
             //todo loadlist
@@ -100,7 +101,8 @@ public class UsersAdapter extends PagerAdapter {
 
     public void scrollNext(){
         if(currentPosition >= 0){
-           // instantiateItem(_container, currentPosition);
+            instantiateItem(_container, currentPosition);
+            notifyDataSetChanged();
         }
         else {
             //todo loadlist

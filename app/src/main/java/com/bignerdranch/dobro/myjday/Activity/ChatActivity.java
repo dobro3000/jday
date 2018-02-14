@@ -13,7 +13,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bignerdranch.dobro.myjday.Adapters.ChatAdapter;
+import com.bignerdranch.dobro.myjday.Models.ChatListModel;
+import com.bignerdranch.dobro.myjday.Models.ChatModel;
 import com.bignerdranch.dobro.myjday.R;
+
+import java.sql.Array;
+import java.util.ArrayList;
 
 /**
  * Created by Dobro on 14.02.2018.
@@ -25,6 +31,7 @@ public class ChatActivity extends AppCompatActivity {
     private EditText messageText;
     private ImageView sendBtn;
     LinearLayoutManager mLinearLayoutManager;
+    ArrayList<ChatModel> chatModelArray;
 
 
     @Override
@@ -37,6 +44,8 @@ public class ChatActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+
 
         messageText = (EditText) findViewById(R.id.edit_message);
         messageText.addTextChangedListener(new TextWatcher() {
@@ -73,6 +82,16 @@ public class ChatActivity extends AppCompatActivity {
         chatList.setHasFixedSize(false);
         mLinearLayoutManager = new LinearLayoutManager(this);
         chatList.setLayoutManager(mLinearLayoutManager);
+
+        chatModelArray = new ArrayList<>();
+        chatModelArray.add(new ChatModel("Привет" , 1));
+        chatModelArray.add( new ChatModel("Привет!",0));
+        chatModelArray.add( new ChatModel("Че как?",  1));
+        chatModelArray.add(new ChatModel("Норм",  0));
+
+        ChatAdapter chatAdapter = new ChatAdapter(this, chatModelArray);
+        chatList.setAdapter(chatAdapter);
+        chatAdapter.notifyDataSetChanged();
 
     }
 }
