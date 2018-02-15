@@ -3,6 +3,7 @@ package com.bignerdranch.dobro.myjday.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -34,6 +35,12 @@ public class UserPrifileActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prifile_user);
+
+
+        ActionBar bar = this.getSupportActionBar();
+        bar.setHomeButtonEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(true);
+        bar.setDisplayShowHomeEnabled(true);
 
        /* nicknameLayout = (RelativeLayout)findViewById(R.id.layaut_change_nickname);
         nicknameLayout.setOnClickListener(this);

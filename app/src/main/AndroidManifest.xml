@@ -43,9 +43,9 @@
         </activity>
 
         <activity
+            android:label="@string/my_user_profile"
             android:name=".Activity.UserPrifileActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.searchable"
                 android:value=".Activities.NavigationActivity"/>
@@ -56,6 +56,7 @@
         </activity>
 
         <activity
+            android:label="@string/user_info"
             android:name=".Activity.AboutUserActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -68,13 +69,14 @@
         </activity>
 
         <activity
+            android:label="@string/registration"
             android:name=".Activity.RegistrationActivity"
             android:windowSoftInputMode="adjustPan"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <activity
-            android:label="@string/setting_app"
+            android:label="@string/setting_title"
             android:name=".Activity.SettingActivity"
             android:windowSoftInputMode="adjustPan">
         </activity>

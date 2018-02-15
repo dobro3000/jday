@@ -29,6 +29,7 @@ public class SettingActivity extends AppCompatActivity {
 
         ActionBar bar = this.getSupportActionBar();
         bar.setHomeButtonEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(true);
 
         ageTxt = (TextView) findViewById(R.id.age_value);
         stageTxt = (TextView) findViewById(R.id.age_stage);
@@ -45,8 +46,8 @@ public class SettingActivity extends AppCompatActivity {
         messageNotify = (RelativeLayout) findViewById(R.id.notification_message);
         superlike = (RelativeLayout) findViewById(R.id.notification_superlike);
         mentorNotify = (RelativeLayout) findViewById(R.id.notification_mentorequest);
-
-
     }
+
+
 
 }

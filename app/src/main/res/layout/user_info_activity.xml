@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@color/background_text"
+    android:background="@color/light_blue"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
@@ -28,14 +28,15 @@
                     android:layout_width="150dp"
                     android:layout_height="200dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/def"/>
+                    android:src="@drawable/profile"/>
 
                 <LinearLayout
+                    android:padding="5dp"
                     android:layout_marginBottom="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
@@ -43,14 +44,16 @@
                         android:id="@+id/title_user"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="User title"
+                        android:text="Павел Седов"
+                        android:textStyle="bold"
+                        android:textColor="#000"
                         android:textSize="25dp"/>
 
                     <TextView
                         android:id="@+id/subtitle_user"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="subtitle"
+                        android:text="Маркетолог, тестировщик"
                         android:textSize="14dp"/>
                 </LinearLayout>
             </FrameLayout>
@@ -59,9 +62,9 @@
             android:layout_margin="10dp"
             android:layout_gravity="bottom|right"
             android:id="@+id/fab_change"
-            android:layout_width="57dp"
-            android:layout_height="57dp"
-            android:src="@drawable/_0004_down"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/down_new"
             app:layout_anchor="@id/app_bar"
             app:layout_anchorGravity="bottom|end"/>
     </FrameLayout>

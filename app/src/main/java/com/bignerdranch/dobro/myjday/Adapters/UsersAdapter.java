@@ -3,6 +3,7 @@ package com.bignerdranch.dobro.myjday.Adapters;
 import android.app.Activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ public class UsersAdapter extends PagerAdapter {
     ArrayList<UsersModels> _users;
     private LayoutInflater layoutInflater;
     ViewGroup _container;
+    View view;
 
     public  UsersAdapter(Activity activity, ArrayList<UsersModels> users){
         _activity = activity;
@@ -51,7 +53,7 @@ public class UsersAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         _container = container;
-        View view = this.layoutInflater.inflate(R.layout.item_list_profile, container, false);
+        view = this.layoutInflater.inflate(R.layout.item_list_profile, container, false);
 
         titleTxt = (TextView) view.findViewById(R.id.title_user);
         titleTxt.setText(_users.get(position).getUserName());
@@ -84,6 +86,7 @@ public class UsersAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
+
         container.removeView((View) object);
     }
 
@@ -91,8 +94,9 @@ public class UsersAdapter extends PagerAdapter {
 
     public void scrollBack(){
         if(currentPosition < getCount() - 1){
+            destroyItem(_container, currentPosition, view);
             instantiateItem(_container, currentPosition);
-            notifyDataSetChanged();
+
         }
         else {
             //todo loadlist

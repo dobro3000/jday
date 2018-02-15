@@ -3,6 +3,7 @@ package com.bignerdranch.dobro.myjday.Fragments;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
     private ImageView backImg, nextImg, likeImg, dislikeImg, favoriteImg;
     private UsersAdapter userAdapter;
+    private Integer currentPosition;
 
     private ArrayList<UsersModels> usersArray;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,12 +40,29 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         _v = inflater.inflate(R.layout.fragment_main, container, false);
 
         mViewPager = (ViewPager) _v.findViewById(R.id.users_list);
-        backImg = (ImageView) _v.findViewById(R.id.back);
+        backImg = (ImageView) _v.findViewById(R.id.back_new);
         nextImg = (ImageView) _v.findViewById(R.id.next);
         likeImg = (ImageView) _v.findViewById(R.id.like);
         dislikeImg = (ImageView) _v.findViewById(R.id.dislike);
         favoriteImg = (ImageView) _v.findViewById(R.id.favorite);
         //mRecyclerView = (RecyclerView)_v.findViewById(R.id.users_list);
+
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                Log.d("logsMy", position + " " + positionOffset + " " + positionOffsetPixels);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                currentPosition = position;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                Log.d("logsMy", "state" +  state);
+            }
+        });
 
         mViewPager.setOnClickListener(this);
         backImg.setOnClickListener(this);
@@ -53,10 +72,10 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         favoriteImg.setOnClickListener(this);
 
         usersArray = new ArrayList<>();
-        usersArray.add(new UsersModels("Паша Седов", "22", "маркетолог"));
-        usersArray.add( new UsersModels("Саша Седов", "44", "программист"));
-        usersArray.add( new UsersModels("Леша Седов", "22", "преподаватель"));
-        usersArray.add(new UsersModels("Миша Седов", "33", "массажист"));
+        usersArray.add(new UsersModels("PHP, HTML", "Павел Седов", "Общий стаж 22 года"));
+        usersArray.add( new UsersModels("Реклама, SMM", "Павел Седов", "Общий стаж 10 лет"));
+        usersArray.add( new UsersModels("Android, C#", "Павел Седов","Общий стаж 22 года"));
+        usersArray.add(new UsersModels("Учитель корейского", "Павел Седов","Общий стаж 5 года"));
 
         userAdapter= new UsersAdapter(getActivity(), usersArray);
         mViewPager.setAdapter(userAdapter);
@@ -68,7 +87,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.back:
+            case R.id.back_new:
                 userAdapter.scrollBack();
                 break;
 

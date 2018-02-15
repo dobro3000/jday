@@ -18,42 +18,42 @@
             android:layout_alignParentBottom="true"
             android:weightSum="5"
             android:gravity="center"
-            android:background="@color/background"
+            android:background="@color/light_blue"
             android:id="@+id/layout_panel"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="100dp">
 
                 <ImageView
-                    android:id="@+id/back"
-                    android:src="@drawable/back"
+                    android:id="@+id/back_new"
+                    android:src="@drawable/back_new"
                     android:layout_weight="1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"/>
 
                 <ImageView
-                    android:src="@drawable/dislike"
+                    android:src="@drawable/dislike_new"
                     android:id="@+id/dislike"
                     android:layout_weight="1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"/>
 
                 <ImageView
-                    android:src="@drawable/favorite"
+                    android:src="@drawable/fin_new"
                     android:id="@+id/favorite"
                     android:layout_weight="1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"/>
 
                 <ImageView
-                    android:src="@drawable/like"
+                    android:src="@drawable/like_new"
                     android:id="@+id/like"
                     android:layout_weight="1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"/>
 
                 <ImageView
-                    android:src="@drawable/next"
+                    android:src="@drawable/right"
                     android:id="@+id/next"
                     android:layout_weight="1"
                     android:layout_width="50dp"

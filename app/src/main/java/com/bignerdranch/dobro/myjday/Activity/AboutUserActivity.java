@@ -1,6 +1,7 @@
 package com.bignerdranch.dobro.myjday.Activity;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +28,10 @@ public class AboutUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_info_activity);
+
+        ActionBar bar = this.getSupportActionBar();
+        bar.setHomeButtonEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(true);
 
         aboutTxt = (TextView) findViewById(R.id.text_about);
         aboutImput = (EditText)findViewById(R.id.input_about);

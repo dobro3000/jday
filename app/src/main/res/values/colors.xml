@@ -9,4 +9,11 @@
     <color name="background">#f9f9f9</color>
     <color name="background_text">#dadada</color>
     <color name="background_button">#ff5900</color>
+
+    <color name="orange">#ff5900</color>
+
+    <color name="light_blue">#4a4f70</color>
+    <color name="blue">#4a4f70</color>
+    <color name="darkblue">#363951</color>
+    <color name="white">#ffffff</color>
 </resources>
